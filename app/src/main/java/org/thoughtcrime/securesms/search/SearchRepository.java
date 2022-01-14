@@ -141,8 +141,8 @@ public class SearchRepository {
 
     try {
       Cursor textSecureContacts = contactRepository.querySignalContacts(query);
-      Cursor systemContacts     = contactRepository.queryNonSignalContacts(query);
-      contacts = new MergeCursor(new Cursor[]{ textSecureContacts, systemContacts });
+
+      contacts = new MergeCursor(new Cursor[]{ textSecureContacts});
 
       return readToList(contacts, new RecipientModelBuilder(), 250);
     } finally {
