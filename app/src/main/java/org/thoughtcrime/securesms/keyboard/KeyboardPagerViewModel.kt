@@ -25,7 +25,7 @@ class KeyboardPagerViewModel : ViewModel() {
         val updatedPages = pages.value.toMutableSet().apply { remove(KeyboardPage.STICKER) }
         pages.postValue(updatedPages)
         if (page.value == KeyboardPage.STICKER) {
-          switchToPage(KeyboardPage.GIF)
+//          switchToPage(KeyboardPage.GIF)
           switchToPage(KeyboardPage.EMOJI)
         }
       }

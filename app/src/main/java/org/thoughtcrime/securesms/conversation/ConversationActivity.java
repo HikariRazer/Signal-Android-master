@@ -2226,9 +2226,9 @@ public class ConversationActivity extends PassphraseRequiredActivity
           case STICKER:
             inputPanel.setMediaKeyboardToggleMode(KeyboardPage.STICKER);
             break;
-          case GIF:
-            inputPanel.setMediaKeyboardToggleMode(KeyboardPage.GIF);
-            break;
+//          case GIF:
+//            inputPanel.setMediaKeyboardToggleMode(KeyboardPage.GIF);
+//            break;
         }
         if (stickerIntro) showStickerIntroductionTooltip();
       }
@@ -2293,7 +2293,7 @@ public class ConversationActivity extends PassphraseRequiredActivity
   }
 
   public void initializeGroupCallViewModel() {
-    groupCallViewModel = ViewModelProviders.of(this, new GroupCallViewModel.Factory()).get(GroupCallViewModel.class);
+   groupCallViewModel = ViewModelProviders.of(this, new GroupCallViewModel.Factory()).get(GroupCallViewModel.class);
 
     recipient.observe(this, r -> {
       groupCallViewModel.onRecipientChange(r);
@@ -2724,9 +2724,9 @@ public class ConversationActivity extends PassphraseRequiredActivity
       case STICKER:
         keyboardPagerViewModel.switchToPage(KeyboardPage.STICKER);
         break;
-      case GIF:
-        keyboardPagerViewModel.switchToPage(KeyboardPage.GIF);
-        break;
+//      case GIF:
+//        keyboardPagerViewModel.switchToPage(KeyboardPage.GIF);
+//        break;
     }
   }
 
